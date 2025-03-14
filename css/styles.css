@@ -420,7 +420,7 @@ a:hover, a:focus {
 }
 
 #hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/img-name.jpeg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -429,9 +429,9 @@ a:hover, a:focus {
     padding: 72px 52px;
 }
 
-#hero.section {
-    max-width: 1440px;
-}
+/*#hero.section {*/
+/*    max-width: 1440px;*/
+/*}*/
 
 #hero .btn-primary {
     margin-top: 72px;
@@ -1068,5 +1068,11 @@ input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 2%;
+    }
+}
+
+@media (min-resolution: 192dpi) {
+    #hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/bg@2x.jpg');
     }
 }
