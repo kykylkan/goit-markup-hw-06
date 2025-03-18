@@ -84,10 +84,9 @@ a:hover, a:focus {
 
 .menu-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 16px 0px;
+    gap: 120px
 }
 
 .main-menu {
@@ -110,6 +109,7 @@ a:hover, a:focus {
 .header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    padding: 16px 0;
 }
 
 .header .container {
@@ -119,10 +119,7 @@ a:hover, a:focus {
 .footer {
     background-color: #2e2f42;
     color: #f4f4fd;
-}
-
-.footer .container {
-    padding: 96px 16px;
+    padding: 96px 0;
 }
 
 .footer-wrapper {
@@ -173,7 +170,7 @@ a:hover, a:focus {
 }
 
 .section {
-    padding: 120px 0;
+    padding: 88px 0;
 }
 
 .container {
@@ -189,11 +186,10 @@ a:hover, a:focus {
 }
 
 .header .container {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: space-between;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
 
 .btn-primary {
     font-weight: 500;
@@ -221,6 +217,7 @@ a:hover, a:focus {
 
 .nav-link {
     font-family: "Roboto", sans-serif;
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -426,7 +423,7 @@ a:hover, a:focus {
     background-repeat: no-repeat;
     color: #ffffff;
     text-align: center;
-    padding: 72px 52px;
+    padding: 72px 0;
 }
 
 /*#hero.section {*/
@@ -862,8 +859,11 @@ input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
     font-weight: 500;
     color: #ffffff;
 }
-
 .menu-toggle {
+    border: none;
+    background: transparent;
+}
+.menu-toggle-icon {
     fill: #2F2F37;
 }
 .mobile-menu-wrapper {
@@ -901,6 +901,7 @@ input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
+    z-index: 1;
 }
 
 .mobile-menu.is-open {
@@ -932,6 +933,9 @@ input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
 @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
+    }
+    .header {
+        padding: 0;
     }
     .header .container {
         /*padding: 16px 16px 0 16px;*/
@@ -987,9 +991,6 @@ input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
         gap: 24px;
         align-items: flex-start;
     }
-    .footer .container {
-        padding: 96px 108px;
-    }
     .footer .logo {
         text-align: left;
     }
@@ -1012,13 +1013,16 @@ input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
 }
 
 @media screen and (min-width: 1158px) {
+    .menu-wrapper {
+        gap: 76px
+    }
+    .section {
+        padding: 120px 0;
+    }
     .container {
         max-width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
-    }
-    .header .container {
-        /*padding: 16px;*/
     }
     .list {
         flex-wrap: nowrap;
@@ -1044,14 +1048,18 @@ input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
         letter-spacing: 2%;
     }
     .list-item-portfolio {
-        max-width: 346px;
+        max-width: 360px;
     }
     .list-portfolio {
         gap: 24px;
+        justify-content: space-between;
+    }
+    .footer {
+        padding: 100px 0;
     }
     .footer .container {
-        padding: 100px 15px;
         flex-direction: row;
+        gap: 0;
     }
     .footer-subscribe {
         justify-content: flex-start;
@@ -1068,6 +1076,23 @@ input[type="checkbox"]:checked + .checkbox-label .input-checkbox {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 2%;
+    }
+    .footer-left {
+        margin-right: 120px;
+    }
+    .footer-wrapper {
+        margin-right: 80px;
+    }
+    .contact-info {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (min-resolution: 92dpi) {
+    #hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/bg@1.5x.jpg');
     }
 }
 
